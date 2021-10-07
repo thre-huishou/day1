@@ -25,15 +25,16 @@ int main()
 	//unsigned char c = -1;
 	//printf("a=%u", a);
 
-	//float
-	//int num = 9;
-	//float* p = (float*)&num;
-	//printf("%d\n", num);
-	//printf("%f\n", *p);
+	////float
+	int num = 9;
+	float* p = (float*)&num;
+	printf("%d\n", num);
+	printf("%f\n", *p);
 
-	//*p = 9.0;
-	//printf("%d\n", num);
-	//printf("%f\n", *p);
-	 
+	*p = 9.0;
+	printf("%d\n", num);
+	printf("%f\n", *p);
+	// 
+
 	return 0;
 }
