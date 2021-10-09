@@ -142,13 +142,13 @@ void test3()
 	print(s,sz);
 }
 
-int main()
-{
-	test3();
-	//test2();
-	//test1();
-	return 0;
-}
+//int main()
+//{
+//	test3();
+//	//test2();
+//	//test1();
+//	return 0;
+//}
 
 //int main()
 //{
@@ -162,5 +162,16 @@ int main()
 //	*pppp = 11;//void类型的指针不能进行解引用操作,pppp++也不行。 
 //	return 0;
 //}
-
- 
+#include<string.h>
+int main()
+{
+	char arr[] = { 'a','b','c','d' };
+	printf("%d\n", strlen(arr));//随机值  //strlen需要的是一个地址，找\0
+	printf("%d\n", strlen(arr+0));//随机值
+	printf("%d\n", strlen(*arr));//代码错误
+	printf("%d\n", strlen(arr[1]));//代码错误
+	printf("%d\n", strlen(&arr));//随机
+	printf("%d\n", strlen(&arr+1));//随机
+	printf("%d\n", strlen(&arr[0]+1));//随机
+	return 0;
+ }
